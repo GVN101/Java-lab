@@ -1,10 +1,10 @@
 import java.util.Scanner;
-class areashapes
+class areas
      {
-      void area(float r)
+      void area(double ra)
          { 
-          int ar;
-          ar=3.14*r*r;
+          double ar;
+          ar=3.14*ra*ra;
           System.out.print("Area is: "+ar);
          } 
       void area(int l,int b)
@@ -15,21 +15,24 @@ class areashapes
          } 
       void area(int b,float h)
          { 
-          int ar;
-          ar=r*r;
+          double ar;
+          ar=0.5*b*h;
           System.out.print("Area is: "+ar);
          }       
      }
-class test
+class areashapes
     {
+     public static void main(String args[])
+     {
+     int ch;
      Scanner s=new Scanner(System.in);
-     System.out.print("Do you want to find the area of:\n1.Circle\n2.Rectangle\n3.Triangle");        
+     System.out.println("Do you want to find the area of:\n1.Circle\n2.Rectangle\n3.Triangle");        
      ch=s.nextInt(); 
-     areashapes obj=new areashapes();
+     areas obj=new areas();
      switch(ch)
        {
         case 1: System.out.print("Enter the radius:");
-                float ra=s.nextInt();
+                double ra=s.nextInt();
                 obj.area(ra);
                 break;
         case 2: System.out.print("Enter the length and breadth:");
@@ -43,7 +46,9 @@ class test
                 obj.area(wi,hi);
                 break;        
        default: System.out.print("Invalid choice!!");
-      }
+      
+      }System.out.print("\n");
+     }
    }
    
    
