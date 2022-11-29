@@ -38,36 +38,28 @@ class Employee
 class Officer extends Employee
     {
      String spe;
-     String dep;
      void det()
           {
             Scanner sc=new Scanner(System.in);
             System.out.print("Enter the Specialization:"); 
             spe=sc.next();
-            System.out.print("Enter the Department:");
-            dep=sc.next(); 
           }
      void dis()
          {
             System.out.println("Employee specialization:"+spe);
-            System.out.println("Employee department:"+dep); 
          }       
     }  
 class manager extends Employee
     {
-     String spe1;
      String dep1;
      void det()
           {
             Scanner sc=new Scanner(System.in);
-            System.out.print("Enter the Specialization:"); 
-            spe1=sc.next();
             System.out.print("Enter the Department:");
             dep1=sc.next(); 
           }
      void dis()
          {
-            System.out.println("Employee specialization:"+spe1);
             System.out.println("Employee department:"+dep1); 
          }        
     }            
